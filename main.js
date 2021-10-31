@@ -15,9 +15,9 @@ function add() {
 	background_imgTag.onload = uploadBackground; 
 	background_imgTag.src = background_image;  
 
-	rover_imgTag = new Image(); 
-	rover_imgTag.onload = uploadgreencar; 
-	rover_imgTag.src = greencar_image;
+	greencar_imgTag = new Image(); 
+	greencar_imgTag.onload = uploadgreencar; 
+	greencar_imgTag.src = greencar_image;
 }
 
 function uploadBackground() {
