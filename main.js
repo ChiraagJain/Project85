@@ -8,7 +8,7 @@ background_image = "parkingLot.jpg";
 greencar_image = "car2.png";
 
 greencar_x = 5;
-car_y = 100;
+greencar_y = 350;
 
 function add() {
 	background_imgTag = new Image(); 
@@ -26,7 +26,7 @@ ctx.drawImage(background_imgTag, 0, 0, canvas.width, canvas.height);
 }
 
 function uploadgreencar() {
-	ctx.drawImage(greencar_imgTag, 0, 0, greencar_width, greencar_height);
+	ctx.drawImage(greencar_imgTag, greencar_x,greencar_y, greencar_width, greencar_height);
 
 	
 }
@@ -67,36 +67,36 @@ function my_keydown(e)
 
 function up()
 {
-	if (car_y >= 550){
-		car_y = car_y - 10;
-		uploadgreencar();
+	if (greencar_y >= 0){
+		greencar_y = greencar_y - 10;
 		uploadBackground();
+		uploadgreencar();
 	}
 }
 
 function down()
 {
-	if (car_y >= 0) {
-		car_y = car_y + 10;
-		uploadgreencar();
+	if (greencar_y <= 350) {
+		greencar_y = greencar_y + 10;
 		uploadBackground();
+		uploadgreencar();
 	}
 }
 
 function left()
 {
-	if (car_x >= 0){
-		car_x = car_x + 10;
-		uploadgreencar();
+	if (greencar_x >= 0){
+		greencar_x = greencar_x - 10;
 		uploadBackground();
+		uploadgreencar();
 	}
 }
 
 function right()
 {
-	if (car_x >=750 ) {
-		car_x = car_x - 10;
-		uploadgreencar();
+	if (greencar_x <=750 ) {
+		greencar_x = greencar_x + 10;
 		uploadBackground();
+		uploadgreencar();
 	}
 }
